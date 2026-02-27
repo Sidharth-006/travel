@@ -35,7 +35,7 @@ body {
   background-position: center;
   text-align: center;
   padding: 100px 20px;
-  color: white;
+  color: rgb(18, 19, 20);
 }
 
 /* ================= SECTION ================= */
@@ -156,3 +156,7 @@ footer {
     margin-top: 10px;
   }
 }
+
+
+
+
