@@ -4,63 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ExploreWorld | Booking</title>
+
 <link rel="stylesheet" href="style.css">
 
-<style>
-
-.booking-container {
-    max-width: 700px;
-    margin: 60px auto;
-    background: rgb(210, 205, 205);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.booking-container h2 {
-    text-align: center;
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.form-grid input,
-.form-grid select {
-    padding: 10px;
-    width: 100%;
-}
-
-.full-width {
-    grid-column: span 2;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    background: #ff6b35;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    opacity: 0.9;
-}
-
-.summary {
-    margin-top: 30px;
-    padding: 20px;
-    background: #f7f7f7;
-    border-radius: 8px;
-}
-.body{
-    background-color: antiquewhite;
-}
-</style>
 </head>
 
 <body>
@@ -124,47 +70,7 @@ button:hover {
     ExploreWorld © 2026
 </footer>
 
-<script>
-
-let totalPrice = 0;
-
-function calculatePrice() {
-
-    let destination = document.getElementById("destination").value;
-    let travelers = document.getElementById("travelers").value;
-    let days = document.getElementById("days").value;
-    let extras = document.getElementById("extras").value;
-
-    if(destination === "" || travelers === "" || days === "") {
-        alert("Please fill required fields");
-        return;
-    }
-
-    totalPrice = (destination * travelers * days) + parseInt(extras);
-
-    document.getElementById("summary").innerHTML =
-        "<h3>Booking Summary</h3>" +
-        "<p>Total Price: <strong>$" + totalPrice + "</strong></p>";
-}
-
-function confirmBooking() {
-
-    let name = document.getElementById("fullName").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-
-    if(name === "" || email === "" || phone === "") {
-        alert("Please enter your personal details");
-        return;
-    }
-
-    document.getElementById("summary").innerHTML =
-        "<h3>🎉 Booking Confirmed!</h3>" +
-        "<p>Name: " + name + "</p>" +
-        "<p>Total Paid: <strong>$" + totalPrice + "</strong></p>";
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
